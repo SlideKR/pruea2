@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aysén Vivo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <p class="eyebrow">Patagonia chilena</p>
+          <h1>Aysén Vivo</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#catalogo">Experiencias</a>
+          <a href="#reserva">Reservar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" aria-label="Presentación de Aysén Vivo">
+        <div class="hero-text">
+          <span class="badge">Turismo sostenible</span>
+          <h2>Descubre experiencias responsables en la Región de Aysén</h2>
+          <p>
+            Reserva aventuras que respetan la naturaleza, conectan con la cultura local y
+            mantienen cupos controlados para un turismo de bajo impacto.
+          </p>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalogo container" aria-label="Catálogo de experiencias">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Experiencias</p>
+            <h2>Explora el territorio</h2>
+          </div>
+        </div>
+
+        <div id="filtros" class="filtros" aria-label="Filtrar experiencias por categoría"></div>
+
+        <div id="experienciasContainer" class="experiencias-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="reserva" class="reserva container" aria-label="Formulario de reserva">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reserva</p>
+            <h2>Planifica tu viaje</h2>
+          </div>
+        </div>
+
+        <form id="formReserva" class="form-reserva" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" />
+            <span class="error-text" data-error-for="nombre" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+            <span class="error-text" data-error-for="email" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="experiencia">Experiencia a reservar</label>
+            <select id="experiencia" name="experiencia">
+              <option value="">Selecciona una experiencia</option>
+            </select>
+            <span class="error-text" data-error-for="experiencia" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="personas">Número de personas</label>
+            <input id="personas" name="personas" type="number" min="1" step="1" />
+            <span class="error-text" data-error-for="personas" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="fecha">Fecha de salida</label>
+            <input id="fecha" name="fecha" type="date" />
+            <span class="error-text" data-error-for="fecha" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn-submit">Confirmar reserva</button>
+          <p id="mensajeExito" class="mensaje-exito" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <span>Aysén Vivo</span>
+        <span>Turismo sostenible • Región de Aysén</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
